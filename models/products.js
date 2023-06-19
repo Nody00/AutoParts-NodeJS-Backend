@@ -5,49 +5,57 @@ const productSchema = new Schema(
   {
     title: {
       type: String,
-      required: true,
     },
     imageUrl: {
       type: String,
-      required: true,
     },
     numCilinders: {
       type: String,
-      required: true,
     },
     capacity: {
       type: String,
-      required: true,
     },
     power: {
       type: String,
-      required: true,
     },
     oil: {
       type: String,
-      required: true,
     },
     price: {
-      type: String,
-      required: true,
+      type: Number,
     },
     description: {
       type: String,
-      required: true,
     },
     miles: {
       type: String,
-      required: true,
     },
     discount: {
       type: Boolean,
-      required: true,
     },
     discountAmount: {
+      type: Number,
+    },
+    category: {
       type: String,
       required: true,
     },
-    category: {
+    brakeSize: {
+      type: String,
+    },
+    brakeMaterial: {
+      type: String,
+    },
+    coolingPower: {
+      type: String,
+    },
+    suspensionTravel: {
+      type: String,
+    },
+    suspensionMaterial: {
+      type: String,
+    },
+    userId: {
       type: String,
       required: true,
     },
