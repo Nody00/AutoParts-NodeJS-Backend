@@ -4,12 +4,10 @@ const bodyParser = require("body-parser");
 const productRoutes = require("./routes/products");
 const authRoutes = require("./routes/auth");
 const paymentsRoutes = require("./routes/payments");
-const helmet = require("helmet");
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use(helmet());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
