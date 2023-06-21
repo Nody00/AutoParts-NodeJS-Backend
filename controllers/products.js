@@ -78,7 +78,7 @@ exports.getProduct = (req, res, next) => {
 
 exports.addProduct = (req, res, next) => {
   const { product } = req.body;
-
+  console.log(product);
   const newProduct = new productModel({
     ...product,
   });
@@ -134,7 +134,7 @@ exports.deleteProduct = (req, res, next) => {
   }
 
   productModel
-    .findOneAndDelete()
+    .findOneAndDelete({ _id: productId })
     .then((result) => {
       res.status(200).json({ result: result, message: "Product Deleted." });
     })

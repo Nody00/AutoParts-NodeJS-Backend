@@ -91,7 +91,7 @@ exports.login = (req, res, next) => {
           email: email,
           userId: loadedUser._id.toString(),
         },
-        "my-32-character-ultra-secure-and-ultra-long-secret",
+        process.env.TOKEN_SECRET,
         {
           expiresIn: "3h",
         }
